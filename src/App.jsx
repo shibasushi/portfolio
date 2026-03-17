@@ -1,4 +1,5 @@
 import FlameCursor from './components/FlameCursor'
+import BackgroundParticles from './components/BackgroundParticles'
 import './App.css'
 
 const portfolioProjects = [
@@ -111,6 +112,7 @@ const experience = [
 function App() {
   return (
     <>
+      <BackgroundParticles />
       <FlameCursor />
       
       <nav className="navbar">
