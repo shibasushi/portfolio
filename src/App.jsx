@@ -3,40 +3,85 @@ import './App.css'
 
 const portfolioProjects = [
   {
+    title: 'SYCU Admin Portal',
+    url: 'https://admin.stuffyoucanuse.org/',
+    description: 'Enterprise admin dashboard for managing church curriculum content, user subscriptions, and organizational settings. Features role-based access control, analytics dashboards, and content management workflows.',
+    tags: ['Enterprise', 'Admin Dashboard', 'SaaS'],
+    techStack: ['React', 'Node.js', 'PostgreSQL', 'AWS', 'Redis']
+  },
+  {
+    title: 'SYCU Accounts',
+    url: 'https://accounts.stuffyoucanuse.org/',
+    description: 'Centralized authentication and user management system. Handles SSO, subscription management, team permissions, and secure access across multiple SYCU applications.',
+    tags: ['Authentication', 'SSO', 'User Management'],
+    techStack: ['React', 'OAuth 2.0', 'JWT', 'Node.js', 'MongoDB']
+  },
+  {
+    title: 'SYCU Curriculum Builder',
+    url: 'https://curriculum.stuffyoucanuse.dev/',
+    description: 'Interactive curriculum development platform enabling content creators to build, customize, and publish church curriculum materials with drag-and-drop editing and real-time collaboration.',
+    tags: ['Content Builder', 'Collaboration', 'EdTech'],
+    techStack: ['React', 'TypeScript', 'GraphQL', 'AWS S3', 'WebSockets']
+  },
+  {
+    title: 'SYCU Page Builder',
+    url: 'https://builder.stuffyoucanuse.org/',
+    description: 'Visual page builder for creating custom landing pages and content layouts. Features component library, responsive design tools, and seamless publishing workflow.',
+    tags: ['Page Builder', 'Visual Editor', 'CMS'],
+    techStack: ['React', 'DnD Kit', 'Node.js', 'PostgreSQL', 'Cloudflare']
+  },
+  {
     title: 'The Huron',
     url: 'https://thehuron.com/',
-    description: 'Luxury condominium website for Brooklyn\'s iconic waterfront development. Features elegant animations, immersive scrolling experience, and sophisticated design reflecting the premium real estate brand. Built with modern web technologies for optimal performance.',
-    tags: ['Real Estate', 'Luxury Brand', 'Animation']
+    description: 'Luxury condominium website for Brooklyn\'s iconic waterfront development. Features elegant animations, immersive scrolling experience, and sophisticated design reflecting the premium real estate brand.',
+    tags: ['Real Estate', 'Luxury Brand', 'Animation'],
+    techStack: ['React', 'GSAP', 'Three.js', 'Contentful', 'Vercel']
   },
   {
     title: 'Honu Bay',
     url: 'https://shophonu.com/',
-    description: 'E-commerce platform for elegant resort wear and beachwear. Clean, modern storefront with seamless shopping experience, product catalog management, and integrated payment systems. Designed for comfort-focused fashion brand.',
-    tags: ['E-Commerce', 'Fashion', 'Shopify']
+    description: 'E-commerce platform for elegant resort wear and beachwear. Clean, modern storefront with seamless shopping experience, product catalog management, and integrated payment systems.',
+    tags: ['E-Commerce', 'Fashion', 'Shopify'],
+    techStack: ['Shopify', 'Liquid', 'JavaScript', 'Stripe', 'Klaviyo']
   },
   {
     title: 'Barbie Li Team',
     url: 'https://www.barbieliteam.com/',
-    description: 'Top-performing real estate team website featuring property listings, home valuations, and lead generation systems. Includes interactive search, testimonials, and CRM integration for New York\'s top 1% real estate professionals.',
-    tags: ['Real Estate', 'Lead Generation', 'CRM']
+    description: 'Top-performing real estate team website featuring property listings, home valuations, and lead generation systems. Includes interactive search, testimonials, and CRM integration.',
+    tags: ['Real Estate', 'Lead Generation', 'CRM'],
+    techStack: ['WordPress', 'PHP', 'MySQL', 'HubSpot', 'Google Maps API']
   },
   {
     title: 'Melissa Wood Health',
     url: 'https://store.melissawoodhealth.com',
-    description: 'Health and wellness e-commerce store with subscription management, product catalog, and seamless checkout experience. Built for scalability with focus on user engagement and conversion optimization.',
-    tags: ['E-Commerce', 'Health', 'Subscription']
+    description: 'Health and wellness e-commerce store with subscription management, product catalog, and seamless checkout experience. Built for scalability with focus on user engagement.',
+    tags: ['E-Commerce', 'Health', 'Subscription'],
+    techStack: ['Shopify Plus', 'React', 'ReCharge', 'Stripe', 'Klaviyo']
   }
 ]
 
 const skills = {
-  frontend: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'React', 'Vue.js', 'jQuery', 'Responsive Design'],
-  backend: ['Node.js', 'PHP (OOP)', 'Python', 'Go', 'Laravel', 'Django', 'FastAPI', 'MySQL'],
-  apis: ['REST API', 'Stripe', 'ServiceM8', 'HubSpot', 'GoHighLevel', 'Telegram', 'Discord'],
-  cms: ['WordPress', 'Shopify', 'Custom Themes', 'Payment APIs', 'Shipping APIs'],
-  ai: ['AI Chatbots', 'CRM Sync', 'Lead Automation', 'Workflow Automation']
+  frontend: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'TypeScript', 'React', 'Vue.js', 'Next.js', 'Three.js'],
+  backend: ['Node.js', 'PHP', 'Python', 'Go', 'Laravel', 'Django', 'FastAPI', 'GraphQL'],
+  database: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'DynamoDB'],
+  cloud: ['AWS (EC2, S3, Lambda)', 'Google Cloud', 'Vercel', 'Cloudflare', 'Docker', 'Kubernetes'],
+  ai: ['OpenAI API', 'LangChain', 'AI Chatbots', 'NLP', 'Workflow Automation', 'n8n'],
+  integrations: ['Stripe', 'HubSpot', 'Salesforce', 'ServiceM8', 'GoHighLevel', 'Zapier']
 }
 
 const experience = [
+  {
+    role: 'Senior Full Stack Developer',
+    company: 'Stuff You Can Use',
+    period: 'Jan 2023 - Present',
+    description: 'Leading development of enterprise SaaS platform serving thousands of churches with curriculum content management, subscription systems, and collaborative tools.',
+    highlights: [
+      'Built admin portal with role-based access control',
+      'Architected centralized SSO authentication system',
+      'Developed interactive curriculum builder platform',
+      'Created visual page builder with drag-and-drop'
+    ]
+  },
   {
     role: 'Lead Web Developer',
     company: 'ROBAT TV',
@@ -185,8 +230,8 @@ function App() {
             improve customer engagement, and drive measurable growth.
           </p>
           <p>
-            Extensive experience in enterprise environments across fintech, iGaming, healthcare, 
-            and other sectors, delivering complex solutions with high reliability and security standards.
+            Extensive experience in enterprise environments across SaaS, fintech, iGaming, healthcare, 
+            and EdTech sectors, delivering complex solutions with high reliability and security standards.
           </p>
           <div className="about-highlights">
             <div className="highlight-card">
@@ -200,18 +245,18 @@ function App() {
             </div>
             <div className="highlight-card">
               <svg viewBox="0 0 24 24" width="40" height="40">
-                <circle cx="12" cy="12" r="3" fill="none" stroke="#ff6b35" strokeWidth="2"/>
-                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="#ff9f1c" strokeWidth="2" strokeLinecap="round"/>
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" fill="none" stroke="#ff6b35" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-              <h3>Automation</h3>
-              <p>AI chatbots and workflow automation</p>
+              <h3>Cloud & DevOps</h3>
+              <p>AWS, GCP, Docker, Kubernetes deployments</p>
             </div>
             <div className="highlight-card">
               <svg viewBox="0 0 24 24" width="40" height="40">
-                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="none" stroke="#ff6b35" strokeWidth="2" strokeLinejoin="round"/>
+                <circle cx="12" cy="12" r="3" fill="none" stroke="#ff6b35" strokeWidth="2"/>
+                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="#ff9f1c" strokeWidth="2" strokeLinecap="round"/>
               </svg>
-              <h3>Performance</h3>
-              <p>Optimized for speed and scalability</p>
+              <h3>AI & Automation</h3>
+              <p>AI chatbots, LLMs, and workflow automation</p>
             </div>
           </div>
         </div>
@@ -302,13 +347,14 @@ function App() {
           <div className="skill-category">
             <div className="skill-header">
               <svg viewBox="0 0 24 24" width="24" height="24">
-                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" fill="none" stroke="#ff6b35" strokeWidth="2"/>
-                <path d="M13.73 21a2 2 0 0 1-3.46 0" fill="none" stroke="#ff9f1c" strokeWidth="2"/>
+                <ellipse cx="12" cy="5" rx="9" ry="3" fill="none" stroke="#ff6b35" strokeWidth="2"/>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" fill="none" stroke="#ff9f1c" strokeWidth="2"/>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" fill="none" stroke="#ff6b35" strokeWidth="2"/>
               </svg>
-              <h3>APIs & Integrations</h3>
+              <h3>Database</h3>
             </div>
             <div className="skill-tags">
-              {skills.apis.map((skill, i) => (
+              {skills.database.map((skill, i) => (
                 <span key={i} className="skill-tag">{skill}</span>
               ))}
             </div>
@@ -316,14 +362,12 @@ function App() {
           <div className="skill-category">
             <div className="skill-header">
               <svg viewBox="0 0 24 24" width="24" height="24">
-                <circle cx="12" cy="12" r="10" fill="none" stroke="#ff6b35" strokeWidth="2"/>
-                <path d="M2 12h20" fill="none" stroke="#ff9f1c" strokeWidth="2"/>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" fill="none" stroke="#ff9f1c" strokeWidth="2"/>
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" fill="none" stroke="#ff6b35" strokeWidth="2"/>
               </svg>
-              <h3>CMS & E-Commerce</h3>
+              <h3>Cloud & DevOps</h3>
             </div>
             <div className="skill-tags">
-              {skills.cms.map((skill, i) => (
+              {skills.cloud.map((skill, i) => (
                 <span key={i} className="skill-tag">{skill}</span>
               ))}
             </div>
@@ -337,6 +381,20 @@ function App() {
             </div>
             <div className="skill-tags">
               {skills.ai.map((skill, i) => (
+                <span key={i} className="skill-tag">{skill}</span>
+              ))}
+            </div>
+          </div>
+          <div className="skill-category">
+            <div className="skill-header">
+              <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" fill="none" stroke="#ff6b35" strokeWidth="2"/>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0" fill="none" stroke="#ff9f1c" strokeWidth="2"/>
+              </svg>
+              <h3>Integrations</h3>
+            </div>
+            <div className="skill-tags">
+              {skills.integrations.map((skill, i) => (
                 <span key={i} className="skill-tag">{skill}</span>
               ))}
             </div>
@@ -384,6 +442,11 @@ function App() {
               <div className="portfolio-info">
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
+                <div className="portfolio-tech-stack">
+                  {project.techStack.map((tech, i) => (
+                    <span key={i} className="tech-tag">{tech}</span>
+                  ))}
+                </div>
                 <div className="portfolio-tags">
                   {project.tags.map((tag, i) => (
                     <span key={i} className="portfolio-tag">{tag}</span>

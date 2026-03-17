@@ -520,6 +520,25 @@ a {
   margin-top: 0.5rem;
 }
 
+.portfolio-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  margin-bottom: 0.75rem;
+}
+
+.tech-tag {
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.2), rgba(255, 159, 28, 0.2));
+  color: var(--accent-3);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 159, 28, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 .portfolio-tag {
   background: rgba(255, 107, 53, 0.1);
   color: var(--accent-2);
